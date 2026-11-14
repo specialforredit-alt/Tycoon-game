@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="MAGNAT EMPIRE — симулятор создания бизнес-империи">
+  <title>MAGNAT EMPIRE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">M</div><div><b>MAGNAT</b><span>EMPIRE</span></div></div>
+      <div class="side-caption">УПРАВЛЕНИЕ</div>
+      <nav id="navigation">
+        <button class="nav-btn active" data-page="dashboard">◈ <span>Главная</span></button>
+        <button class="nav-btn" data-page="business">▦ <span>Бизнес</span></button>
+        <button class="nav-btn" data-page="market">↗ <span>Рынок</span></button>
+        <button class="nav-btn" data-page="bank">▤ <span>Банк</span></button>
+        <button class="nav-btn" data-page="research">⌘ <span>Развитие</span></button>
+        <button class="nav-btn" data-page="tasks">✧ <span>Задания</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="save-status"><i></i> Автосохранение включено</div>
+        <button class="nav-btn" data-page="settings">⚙ <span>Настройки</span></button>
+        <button class="nav-btn" id="adminOpen">♜ <span>Администрирование</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle">☰</button>
+        <div class="top-title"><span class="eyebrow">КОРПОРАЦИЯ / ГЛАВНЫЙ ОФИС</span><h1 id="pageTitle">Панель управления</h1></div>
+        <div class="top-actions"><div class="level-chip">УРОВЕНЬ <b id="level">1</b></div><button class="icon-btn" id="saveNow" title="Сохранить">💾</button></div>
+      </header>
+      <section class="content" id="pageContent"></section>
+      <footer>MAGNAT EMPIRE <span>•</span> Экономическая стратегия <span class="footer-right">Версия 0.1.0 · Локальное сохранение</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="game.js"></script>
+</body>
+</html>
